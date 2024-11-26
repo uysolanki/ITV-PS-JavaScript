@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .my-heading{
+            background-color: red;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .click-me-button{
+            background-color: rgb(216, 27, 27);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 2px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="js-my-heading my-heading" >Welcome to Pune</h1>
+    <button class="click-me-button js-click-me-button" onclick="display();">SUBSCRIBE</button>
+    <p>Welcome to ITVedant</p> 
+    <p>Welcome to <b>Pimple Saudagar</b></p>
+    <p>Welcome to FSD</p>
+    <script>
+        function display(){
+        //    let a=10;
+        //    let b=20;
+        //    let c=a+b;
+        //    console.log(c);
+        let headingElement=document.querySelector('.js-my-heading');
+        headingElement.innerHTML='Virat Kohli';
+
+        }
+    </script>
+</body>
+</html>
+
