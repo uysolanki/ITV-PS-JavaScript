@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calculateAveragePer();">Calculate Percentage</button>
+    
+    <script>
+        function calculateAveragePer()
+        {
+        let marks1=parseInt(prompt('Please enter Marks of Subject 1'))
+        let marks2=parseInt(prompt('Please enter Marks of Subject 2'))
+        let marks3=parseInt(prompt('Please enter Marks of Subject 3'))
+        let totalMarks=marks1+marks2+marks3;
+        let avgMarks=totalMarks/3;
+        alert(`Your Percenatage is ${avgMarks}`)
+        }
+
+        // calculateAveragePer()
+
+    </script>
+</body>
+</html>
