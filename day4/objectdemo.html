@@ -11,13 +11,26 @@
         jno: 18,
         pname: "Virat",
         mp: 100,
-        rs: 10000,
+        rs: 7680,
+        'titles-won':7,
+        titles:10,
+
+        calculateAvg:function()
+        {
+            const avg=this.rs/this.mp;
+            console.log(avg)
+        }
       };
 
+      let won=5;
+      console.log(player1['titles-won'])
+      console.log(player1.titles-won)
       console.log(player1.jno);
       console.log(player1.pname)
 
       console.log(player1['jno'])
+      console.log(player1.rs-player1.mp)
+      player1.calculateAvg();
     </script>
   </body>
 </html>
