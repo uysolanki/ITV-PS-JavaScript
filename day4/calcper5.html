@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1">Enter Marks for Subject 1</label>
+    <input type="text" id="num1"> <br>
+    <label for="num2">Enter Marks for Subject 2</label>
+    <input type="text" id="num2"> <br>
+    <label for="num3">Enter Marks for Subject 3</label>
+    <input type="text" id="num3"> <br>
+    <button onclick="calculateAveragePer();">Calculate Percentage</button> <br>
+
+    <h3 id="resultPer"></h3>
+    <h3 id="resultStatus"></h3>
+    <h3 id="resultGrade"></h3>
+    
+    <script>
+        function calculateAveragePer()
+        {
+        let marks1=parseInt(document.getElementById('num1').value);
+        let marks2=parseInt(document.getElementById('num2').value);
+        let marks3=parseInt(document.getElementById('num3').value);
+        let totalMarks=marks1+marks2+marks3;
+        //console.log(totalMarks)
+        let avgMarks=totalMarks/3;
+        //console.log(avgMarks)
+        const resultPercentage=document.getElementById('resultPer').innerHTML=`Your Percentage is ${avgMarks}`
+        const resultStatus=document.getElementById('resultStatus');
+        if(avgMarks>=40)
+        {
+            resultStatus.innerHTML='Pass'
+        }
+        else
+        {
+            resultStatus.innerHTML='Not Pass'
+        }
+
+
+        const resultGrade=document.getElementById('resultGrade');
+        if(avgMarks>=70)
+        {
+            resultGrade.innerHTML='Distinction'
+        }
+        else  if(avgMarks>=60)
+        {
+            resultGrade.innerHTML='First Class'
+        }
+        else  if(avgMarks>=50)
+        {
+            resultGrade.innerHTML='Second Class'
+        }
+        else  if(avgMarks>=40)
+        {
+            resultGrade.innerHTML='Pass Class'
+        }
+        else
+        {
+            resultGrade.innerHTML='Hard Luck, Try harder next time'
+        }
+
+        }
+
+        // calculateAveragePer()
+
+    </script>
+</body>
+</html>
