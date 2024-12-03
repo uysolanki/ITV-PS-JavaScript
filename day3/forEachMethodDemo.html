@@ -9,17 +9,21 @@
    
    
    <script>
-        const cars=['Maruti','Audi','Honda','Jeep','Bmw','Merc']
+        //const cars=['Maruti','Audi','Honda','Jeep','Bmw','Merc']
         // for(let i=0;i<cars.length;i++)
         // {
         //     console.log(cars[i])
         // }
 
-        // for(let car of cars)
+        // for(let car of cars) //used to iterate a  []
         // {
         //     console.log(`I like ${car}`)
         // }
-
+ 
+        // for(let car in cars) ////used to iterate a  {}
+        // {
+        //     console.log(`I like ${car}`)
+        // }
         // const name='Alice'
         // const age=23
         // const height=5.11
@@ -43,6 +47,26 @@
         //     i++
         // }while(i<=5)
         // console.log(sum)
+
+
+        
+        // for(let i=0;i<cars.length;i++)
+        // {
+        //     console.log(cars[i])
+        // }
+
+        const cars=['Toyota','Maruti','Audi','Honda','Jeep','Bmw','Merc']
+        // for(let car of cars) //loop
+        // {
+        //     console.log(`I like ${car}`)
+        // }
+
+        cars.forEach(
+            (c)=>{
+                console.log(`I like ${c}`)
+            }
+        )
+
 
    </script>
 </body>

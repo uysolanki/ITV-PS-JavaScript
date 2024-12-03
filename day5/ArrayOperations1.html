@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers=[1,2,3,4,5,7]
+//q1 display sum of all the numbers in the array
+
+//Sol1 : using classical for loop
+    let sum=0
+    for(let i=0;i<numbers.length;i++)
+    {
+        sum+=numbers[i]
+    }
+    console.log('Sum of All numbers using classical FOR LOOP is ',sum)
+
+//Sol2: using for of loop
+    sum=0
+    for(let n of numbers)
+    {
+        sum+=n
+    }
+    console.log('Sum of All numbers using FOR OF LOOP is ',sum)
+//Sol3: using forEach() method
+sum=0
+numbers.forEach(
+    (n)=>{
+        sum+=n
+    }
+)
+console.log('Sum of All numbers using FOREACH METHOD ',sum)
+
+//Sol4: using Reduce() method
+let sum1=numbers.reduce(
+    (n,acc)=>{
+            return n+acc
+    },0
+)
+console.log('Sum of All numbers using REDUCE METHOD ',sum1)
+
+//q2) make a array with double values from numbers array
+//Sol1 : using for of loop
+    let numbers2=[]
+    for(let n of numbers)
+    {
+        let m=n*n
+        numbers2.push(m)
+    }
+    console.log('Single Array' ,numbers)
+    console.log('Doubled Array using for Of loop' ,numbers2)
+//Sol2a : using map() method of loop
+// const numbers3=numbers.map(
+//     (n)=>{
+//         return n*n
+//     }
+// )
+
+//Sol2b : using map() method of loop
+const numbers4=numbers.map((n)=>n*n)
+console.log('Doubled Array using Map Method' ,numbers4)
+
+//q3) display me all odd numbers into a new Array
+//Sol3 
+const numbers5=numbers.filter(
+    (n)=>
+    {
+    return n%2==1
+    }
+)
+
+console.log('Odd element Array using Filter Method' ,numbers5)
+
+
+//q4) : display the sum of all odd numbers
+// let oddNumberArray=numbers.filter(
+//     (n)=>{
+//         return n%2==1
+//     }
+// )
+
+// const res1= oddNumberArray.reduce(
+//     (n,acc)=>{
+//         return n+acc
+//     }
+// )
+
+const res2=numbers.filter((n)=>n%2==1).reduce((n,acc)=>  n+acc)
+
+console.log(res2)
+
+ </script>
+</body>
+</html>
