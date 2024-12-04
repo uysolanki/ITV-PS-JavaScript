@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .player-button{
-            bgc
-        }
+      
     </style>
 </head>
 <body>
     <button class="player-button" onclick="playGame('Rock')">Rock</button>
     <button class="player-button" onclick="playGame('Paper')">Paper</button>
     <button class="player-button" onclick="playGame('Scissors')">Scissors</button>
+    <p id="moves"></p>
+    <p id="results"></p>
+    <p id="score"></p>
     <script>
     score={
             win:0,
@@ -72,6 +73,15 @@
                     case 'Tie' :score.tie+=1
                 }
         console.log(score)
+
+        const displayMovesElement=document.querySelector('#moves')
+        displayMovesElement.innerHTML=`Player Move : ${playerMove}    |     Computer Move : ${computerMove}`
+    
+        const displayResultElement=document.querySelector('#results')
+        displayResultElement.innerHTML=`Result : ${result}`
+
+        const displayScoreElement=document.querySelector('#score')
+        displayScoreElement.innerHTML=`Wins : ${score.win} , Loss : ${score.lose} , Tie : ${score.tie}`
     }
     
     function generateComputerMove()
