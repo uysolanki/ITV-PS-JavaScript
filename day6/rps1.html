@@ -15,7 +15,11 @@
     <button class="player-button" onclick="playGame('Paper')">Paper</button>
     <button class="player-button" onclick="playGame('Scissors')">Scissors</button>
     <script>
-    
+    score={
+            win:0,
+            lose:0,
+            tie:0
+        }
   
     function playGame(playerMove)
     {
@@ -59,6 +63,15 @@
         }
 
         console.log(`Result : ${result}`)
+        switch(result)
+                {
+                    case 'Lose': score.lose+=1
+                    break
+                    case 'Win': score.win+=1
+                    break
+                    case 'Tie' :score.tie+=1
+                }
+        console.log(score)
     }
     
     function generateComputerMove()
