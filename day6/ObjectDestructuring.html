@@ -8,21 +8,29 @@
 <body>
     <script>
 
-student={
+player={
             rno:18,
             name:"Virat",
             mp:100,
             rs:5000
         }
 
-        let {rno,name,mp,rs}=student
-        console.log(rno)
+        // let {rno,name,mp,rs}=player
+        // console.log(rno)
 
-        let {rno:rollno,name:playername,mp:matchesplayed,rs:runsscored}=student
-        console.log(rollno)
-        console.log(playername)
-        console.log(matchesplayed)
-        console.log(runsscored)
+        // let {rno:rollno,name:playername,mp:matchesplayed,rs:runsscored}=player
+        // console.log(rollno)
+        // console.log(playername)
+        // console.log(matchesplayed)
+        // console.log(runsscored)
+
+
+        let {rno,name,...c}=player
+        console.log(c)  //{mp:100, rs:5000}
+
+        let player1={...player,titlesWon:7}
+        console.log(player1)
+
     </script>
 </body>
 </html>

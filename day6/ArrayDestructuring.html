@@ -29,13 +29,26 @@
         // console.log(b)
 
 
-        let numbers=[10,20,30]
-        let[a,b]=numbers
+        // let numbers=[10,20,30]
+        // let[a,b]=numbers
+        // console.log(a)
+        // console.log(b)
+
+
+        let numbers=[10,20,30,40,50,60]    //rest operator
+        let[a,b,...c]=numbers
         console.log(a)
         console.log(b)
+        console.log(c)
 
+        // let numbers1=[numbers,70]
+        // console.log(numbers1) //[[10,20,30,40,50,60],70]
+
+        let numbers1=[...numbers,70]
+        console.log(numbers1) //[10,20,30,40,50,60,70]
         
 
+                             
         
     </script>
 </body>

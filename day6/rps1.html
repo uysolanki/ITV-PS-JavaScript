@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="playGame('Rock')">Rock</button>
+    <button onclick="playGame('Paper')">Paper</button>
+    <button onclick="playGame('Scissors')">Scissors</button>
+    <script>
+    
+  
+    function playGame(playerMove)
+    {
+        let computerMove=generateComputerMove()
+        console.log(`Player Move : ${playerMove}`)
+        console.log(`Computer Move : ${computerMove}`)
+    }
+    
+    function generateComputerMove()
+    {
+        let randomNumber=Math.random()
+        console.log(randomNumber)
+        let computerMove
+        if(randomNumber<=0.33)
+        {
+            computerMove='Rock'
+        }
+        else if(randomNumber>0.33 && randomNumber<=0.67)
+        {
+            computerMove='Paper'
+        }
+        else
+        {
+            computerMove='Scissors'
+        }
+        return computerMove
+    }
+    </script>
+</body>
+</html>
