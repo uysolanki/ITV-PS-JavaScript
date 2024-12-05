@@ -23,9 +23,9 @@
     </style>
 </head>
 <body>
-    <button class="player-button" onclick="playGame('Rock')"><img src="../images/rock-emoji.png" class="move-icon"></button>
-    <button class="player-button" onclick="playGame('Paper')"><img src="../images/paper-emoji.png" class="move-icon" ></button>
-    <button class="player-button" onclick="playGame('Scissors')"><img src="../images/scissors-emoji.png" class="move-icon"></button>
+    <button class="player-button" id="rock-button"><img src="../images/rock-emoji.png" class="move-icon"></button>
+    <button class="player-button" id="paper-button"><img src="../images/paper-emoji.png" class="move-icon" ></button>
+    <button class="player-button" id="scissors-button"><img src="../images/scissors-emoji.png" class="move-icon"></button>
     <p id="moves"></p>
     <p id="results"></p>
     <p id="score"></p>
@@ -36,6 +36,32 @@
             tie:0
         }
   
+    document.body.addEventListener('keydown', handleKeydownITV)
+    function handleKeydownITV(event)
+    {
+        console.log(event.key)
+        switch(event.key)
+        {
+            case 'r':
+            case 'R': playGame('Rock'); break
+
+            case 'p':
+            case 'P': playGame('Paper'); break
+
+            case 's':
+            case 'S': playGame('Scissors'); break
+        }
+    }
+    
+    const rockButtonElement=document.getElementById('rock-button')
+    rockButtonElement.addEventListener('click',()=>{playGame('Rock')})
+
+    const paperButtonElement=document.getElementById('paper-button')
+    paperButtonElement.addEventListener('click',()=>{playGame('Paper')})
+
+    const scissorsButtonElement=document.getElementById('scissors-button')
+    scissorsButtonElement.addEventListener('click', ()=>{playGame('Scissors')})
+
     function playGame(playerMove)
     {
         let computerMove=generateComputerMove()
