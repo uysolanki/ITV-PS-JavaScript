@@ -77,13 +77,28 @@
     var autoplayButtonElement=document.querySelector('.js-auto-play-button')
     autoplayButtonElement.addEventListener('click',autoPlayMode)
 
+    let isAutoPlay=false                     //true
+    let intervalID 
     function autoPlayMode()
     {
         //console.log("Autoplay button clicked")
-        setInterval(()=>{
+        if(isAutoPlay===false)
+        {
+        intervalID=setInterval(()=>{
         let computerGeneratedPlayerMove=generateComputerMove()
         playGame(computerGeneratedPlayerMove)
         },2000) 
+
+        isAutoPlay=true
+        autoplayButtonElement.style.setProperty('background-color','green')
+        }
+
+        else
+        {
+        clearInterval(intervalID)
+        autoplayButtonElement.style.setProperty('background-color','red')
+        isAutoPlay=false
+        }
     }
     function playGame(playerMove)
     {
