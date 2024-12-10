@@ -1,0 +1,1 @@
+export const listBikes=["Suzuki", "Yamaha","Bullet","Bajaj"]
