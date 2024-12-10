@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list-bikes">
+
+    </div>
+    <script>
+        listBikes=["Suzuki", "Yamaha","Bullet","Bajaj"]  //step 1
+        
+        ordererList='<ol>';
+        listBikes.forEach(
+            (bike)=> ordererList+=`<li class="bike-names">${bike}</li>`
+        );
+        ordererList+='</ol>'                    
+
+        console.log(ordererList)
+        
+        //document.getElementById('list-bikes').innerHTML=ordererList; //step 2
+        document.querySelector('#list-bikes').innerHTML=ordererList
+
+        const bikeListElements=document.querySelectorAll('.bike-names')
+        console.log(bikeListElements)
+
+        bikeListElements.forEach(
+            (bikeListElement)=>{
+                bikeListElement.addEventListener('click',
+                    ()=>{
+                        console.log('Clicked')
+                    }
+                )
+            }
+        )
+
+    </script>
+</body>
+</html>
