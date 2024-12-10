@@ -1,0 +1,16 @@
+body
+{
+    padding-left: 50px;
+}
+.product-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+.product-card
+{
+    height: 400px;
+    width: 350px;
+    background-color: lightblue;
+}
