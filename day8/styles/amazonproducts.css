@@ -1,16 +1,49 @@
-body
-{
-    padding-left: 50px;
-}
-.product-container
-{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 20px;
-}
-.product-card
-{
-    height: 400px;
-    width: 350px;
-    background-color: lightblue;
-}
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Container for the product cards */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Style for each product card */
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Image styling inside the card */
+  .product-card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title styling */
+  .product-card .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Text styling for the description, price, and category */
+  .product-card .card-text {
+    font-size: 0.9em;
+    color: #555;
+    margin: 5px 0;
+  }
