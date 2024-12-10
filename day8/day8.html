@@ -9,6 +9,7 @@
     <div id="list-bikes">
 
     </div>
+    <div id="bike"></div>
     <script>
         listBikes=["Suzuki", "Yamaha","Bullet","Bajaj"]  //step 1
         
@@ -30,7 +31,15 @@
             (bikeListElement)=>{
                 bikeListElement.addEventListener('click',
                     ()=>{
-                        console.log('Clicked')
+                        //console.log(bikeListElement.innerHTML)
+                        switch(bikeListElement.innerHTML)
+                        {
+                            case "Suzuki" : document.querySelector('#bike').innerHTML='Alice'; break;
+                            case "Yamaha" : document.querySelector('#bike').innerHTML=`${bikeListElement.innerHTML} Owner name is Ben`; break;
+                            case "Bullet" : document.querySelector('#bike').innerHTML='Chris'; break;
+                            case "Bajaj" : document.querySelector('#bike').innerHTML='David'; break;
+                            default : document.querySelector('#bike').innerHTML='Elcid'; break;
+                        }
                     }
                 )
             }
