@@ -16,6 +16,7 @@ console.log(bikeListElements)
 
 bikeListElements.forEach(
     (bikeListElement)=>{
+        bikeListElement.style.setProperty('cursor','pointer')
         bikeListElement.addEventListener('click',
             ()=>{
                 //console.log(bikeListElement.innerHTML)

@@ -1,0 +1,23 @@
+
+*
+{
+    padding-left: 0px;
+}
+
+body
+{
+    margin-left: 20px;
+}
+ol{
+    background-color: blue;
+    display: inline-block;
+    list-style: none;
+}
+
+ol li{
+    margin: 10px;
+}
+
+ol li:hover{
+    background-color: yellow;
+}
